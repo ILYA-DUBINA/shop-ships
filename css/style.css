@@ -10,7 +10,6 @@
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -71,8 +70,16 @@ a {
   width: 180px;
   height: 40px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   font-family: Segoe UI;
@@ -85,13 +92,21 @@ a {
 
   color: #ffffff;
 
+  background: -o-linear-gradient(2.77deg, rgba(128, 26, 179, 0) -91.42%, #4c4cff 99.79%);
+
   background: linear-gradient(87.23deg, rgba(128, 26, 179, 0) -91.42%, #4c4cff 99.79%);
   border-radius: 4px;
 }
 a:hover {
   text-decoration: none;
 
+  -webkit-transform: scale(1.01);
+
+  -ms-transform: scale(1.01);
+
   transform: scale(1.01);
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
@@ -134,6 +149,10 @@ body {
   top: 160px;
   left: 0;
 
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 19, 22, 0)), to(#131316));
+
+  background: -o-linear-gradient(top, rgba(19, 19, 22, 0) 0%, #131316 100%);
+
   background: linear-gradient(180deg, rgba(19, 19, 22, 0) 0%, #131316 100%);
 }
 .content {
@@ -147,8 +166,14 @@ body {
   z-index: 10;
 }
 .content__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   margin: 0 0 40px 0;
@@ -159,7 +184,12 @@ body {
 }
 
 .logo__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   font-family: Montserrat;
@@ -195,6 +225,8 @@ body {
 
   border-radius: 50%;
 
+  background: -o-linear-gradient(2.77deg, rgba(128, 26, 179, 0) -91.42%, #4c4cff 99.79%);
+
   background: linear-gradient(87.23deg, rgba(128, 26, 179, 0) -91.42%, #4c4cff 99.79%);
 }
 
@@ -215,7 +247,10 @@ body {
   color: #ffffff;
 }
 .newships__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .newships__content:nth-child(3) {
@@ -242,7 +277,12 @@ body {
   background: rgba(255, 255, 255, 0.95);
 }
 .newships__content-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100%;
 }
@@ -280,6 +320,8 @@ body {
 
 .card__image {
   min-height: 150px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 
   text-align: center;
@@ -297,9 +339,15 @@ body {
   top: 50%;
   left: 50%;
 
+  -webkit-transform: translate(-50%, -50%);
+
+  -ms-transform: translate(-50%, -50%);
+
   transform: translate(-50%, -50%);
 }
 .card__title {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 
   font-family: Segoe UI;
@@ -314,13 +362,24 @@ body {
   color: #131316;
 }
 .card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+
+  -webkit-box-flex: 1;
+
+  -ms-flex: 1 0 auto;
 
   flex: 1 0 auto;
 }
 .card__link {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 
   margin: 10px auto;
@@ -342,7 +401,12 @@ body {
   color: #ffffff;
 }
 .dayship__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   border-radius: 4px;
@@ -350,6 +414,8 @@ body {
   background: rgba(255, 255, 255, 0.95);
 }
 .dayship__content-ship {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .ship__image {
@@ -361,6 +427,8 @@ body {
   margin: 30px 0 30px 10px;
 }
 .ship__text-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .icon__img {
@@ -372,6 +440,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   margin: 0 0 5px 0;
@@ -384,6 +454,8 @@ body {
   font-weight: 400;
   font-size: 13px;
   line-height: 17px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   margin: 0 0 21px 0;
@@ -391,7 +463,11 @@ body {
   color: #131316;
 }
 .ship__text-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   margin: 0 0 20px 0;
@@ -415,6 +491,8 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   color: #131316;
@@ -427,6 +505,8 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 
@@ -440,7 +520,13 @@ body {
 .result__discount {
   height: 30px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .result__discount-text {
@@ -522,7 +608,11 @@ body {
   color: #ffffff;
 }
 .socialNetwork__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   margin: 18px 0px 0px 0;
@@ -547,6 +637,10 @@ body {
   top: 50%;
   left: 50%;
 
+  -webkit-transform: translate(-50%, -50%);
+
+  -ms-transform: translate(-50%, -50%);
+
   transform: translate(-50%, -50%);
 }
 .socialNetwork__links-image a {
@@ -561,7 +655,11 @@ body {
 }
 
 .content__footer-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   padding: 0 0 26px 0;
@@ -605,6 +703,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   text-align: left;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   text-transform: lowercase;
   letter-spacing: normal;
